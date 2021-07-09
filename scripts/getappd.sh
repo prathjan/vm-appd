@@ -49,8 +49,8 @@ install="$(curl -s --location --request GET "https://devnet.saas.appdynamics.com
 --header "Authorization: Bearer ${temp}" --data-raw '')"
 
 
-echo -n "{\"download\":\"testing\", \"install\":\"testing2\"}"
-#echo -n "{\"download\":${download}, \"install\":${install}}" | tr -d ']['
+#echo -n "{\"download\":\"testing\", \"install\":\"testing2\"}"
+echo -n "{\"download\":${download}, \"install\":${install}}" | tr -d ']['
 
 
 #echo
