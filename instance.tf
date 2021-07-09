@@ -39,6 +39,7 @@ data "external" "appd" {
 #    javaver = "${var.javaver}" 
 }
 
+/*
 
 resource "random_string" "folder_name_prefix" {
   length    = 10
@@ -232,7 +233,7 @@ resource "null_resource" "vm_node_init" {
 #    }
 #  }
 }
-
+*/
 output "vm_deploy" {
   value = [vsphere_virtual_machine.vm_deploy.*.name, vsphere_virtual_machine.vm_deploy.*.default_ip_address]
 }
