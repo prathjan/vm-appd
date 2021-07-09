@@ -53,7 +53,7 @@ install="$(curl -s --location --request GET "https://devnet.saas.appdynamics.com
 echo -n "{\"download\":${download}, \"install\":${install}}" | tr -d ']['
 
 
-#echo
+echo "${download}"
 #echo "WITHOUT"
 #echo $download | tr -d ']['
 #END
