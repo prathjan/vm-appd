@@ -36,15 +36,16 @@ temp="${temp#\"}"
 #echo "$temp"
 
 #download="$(curl -s --location --request GET 'https://devnet.saas.appdynamics.com/zero/v1beta/install/downloadCommand?javaVersion=latest&machineVersion=latest&infraVersion=latest&zeroVersion=latest&multiline=false' \
-download="$(curl -s --location --request GET "https://devnet.saas.appdynamics.com/zero/v1beta/install/downloadCommand?javaVersion=${JVER}&machineVersion=latest&infraVersion=latest&zeroVersion=latest&multiline=false" \
---header "Authorization: Bearer ${temp}" --data-raw '')"
+
+#download="$(curl -s --location --request GET "https://devnet.saas.appdynamics.com/zero/v1beta/install/downloadCommand?javaVersion=${JVER}&machineVersion=latest&infraVersion=latest&zeroVersion=latest&multiline=false" \
+#--header "Authorization: Bearer ${temp}" --data-raw '')"
 
 #install="$(curl -s --location --request GET "https://devnet.saas.appdynamics.com/zero/v1beta/install/installCommand?sudo=true&multiline=false&application="yyy"&accessKey="yyy"&serviceUrl=https://devnet.saas.appdynamics.com" \
 #--header "Authorization: Bearer ${temp}" --data-raw '')"
 
 
-install="$(curl -s --location --request GET "https://devnet.saas.appdynamics.com/zero/v1beta/install/installCommand?sudo=true&multiline=false&application=${APP_NAME}&accessKey=${ACC_KEY}&serviceUrl=https://devnet.saas.appdynamics.com" \
---header "Authorization: Bearer ${temp}" --data-raw '')"
+#install="$(curl -s --location --request GET "https://devnet.saas.appdynamics.com/zero/v1beta/install/installCommand?sudo=true&multiline=false&application=${APP_NAME}&accessKey=${ACC_KEY}&serviceUrl=https://devnet.saas.appdynamics.com" \
+#--header "Authorization: Bearer ${temp}" --data-raw '')"
 
 
 #echo -n "{\"download\":\"testing\", \"install\":\"testing2\"}"
