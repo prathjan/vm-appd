@@ -45,8 +45,8 @@ download="$(curl -s --location --request GET "https://devnet.saas.appdynamics.co
 #--header "Authorization: Bearer ${temp}" --data-raw '')"
 
 
-#install="$(curl -s --location --request GET "https://devnet.saas.appdynamics.com/zero/v1beta/install/installCommand?sudo=true&multiline=false&application=${APP_NAME}&accessKey=${ACC_KEY}&serviceUrl=https://devnet.saas.appdynamics.com" \
-#--header "Authorization: Bearer ${temp}" --data-raw '')"
+install="$(curl -s --location --request GET "https://devnet.saas.appdynamics.com/zero/v1beta/install/installCommand?sudo=true&multiline=false&application=${APP_NAME}&accessKey=${ACC_KEY}&serviceUrl=https://devnet.saas.appdynamics.com" \
+--header "Authorization: Bearer ${temp}" --data-raw '')"
 
 
 echo -n "{\"download\":\"testing\", \"install\":\"testing2\"}"
