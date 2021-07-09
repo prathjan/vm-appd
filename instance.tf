@@ -25,7 +25,7 @@ data "vsphere_virtual_machine" "template" {
 }
 
 data "external" "appd" {
-  program = ["bash", "./scripts/getappd.sh"]
+  program = ["bash" "./scripts/getappd.sh"]
   query = {
     appname = "${var.appname}" 
     accesskey = "${var.accesskey}" 
