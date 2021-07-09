@@ -29,10 +29,11 @@ function parse_input() {
 parse_input
 
 #content=$(curl -s --location --request POST 'https://devnet.saas.appdynamics.com/auth/v1/oauth/token' --header 'Content-Type: application/x-www-form-urlencoded' --data-urlencode 'grant_type=client_credentials' --data-urlencode 'client_id=devclient@devnet' --data-urlencode 'client_secret=${CL_SECRT}' | jq '.access_token') 
-content=$(curl -s --location --request POST 'https://devnet.saas.appdynamics.com/auth/v1/oauth/token' --header 'Content-Type: application/x-www-form-urlencoded' --data-urlencode 'grant_type=client_credentials' --data-urlencode 'client_id=devclient@devnet' --data-urlencode 'client_secret=52961b11-dd9d-42ee-8426-917f4adb8e75' | jq '.access_token') 
 
-temp="${content%\"}"
-temp="${temp#\"}"
+#content=$(curl -s --location --request POST 'https://devnet.saas.appdynamics.com/auth/v1/oauth/token' --header 'Content-Type: application/x-www-form-urlencoded' --data-urlencode 'grant_type=client_credentials' --data-urlencode 'client_id=devclient@devnet' --data-urlencode 'client_secret=52961b11-dd9d-42ee-8426-917f4adb8e75' | jq '.access_token') 
+
+#temp="${content%\"}"
+#temp="${temp#\"}"
 #echo "$temp"
 
 #download="$(curl -s --location --request GET 'https://devnet.saas.appdynamics.com/zero/v1beta/install/downloadCommand?javaVersion=latest&machineVersion=latest&infraVersion=latest&zeroVersion=latest&multiline=false' \
@@ -48,8 +49,8 @@ temp="${temp#\"}"
 #--header "Authorization: Bearer ${temp}" --data-raw '')"
 
 
-#echo -n "{\"download\":\"testing\", \"install\":\"testing2\"}"
-echo -n "{\"download\":${download}, \"install\":${install}}" | tr -d ']['
+echo -n "{\"download\":\"testing\", \"install\":\"testing2\"}"
+#echo -n "{\"download\":${download}, \"install\":${install}}" | tr -d ']['
 
 
 #echo
